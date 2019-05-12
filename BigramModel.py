@@ -1,5 +1,8 @@
 # MIT License; see ./LICENSE
 
+# AUTHOR : Floriana ZEFI
+# CONTACT : florianagjzefi@gmail.com or floriana.zefi@ing.com
+# PUBLICATION DATE : 12-05-2019
 
 import time
 import pandas as pd
