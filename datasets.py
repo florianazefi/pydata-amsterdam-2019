@@ -1,12 +1,13 @@
 # MIT License; see ./LICENSE
 
+# AUTHOR : Floriana ZEFI
+# CONTACT : florianagjzefi@gmail.com or floriana.zefi@ing.com
+
 
 import numpy as np
 import pandas as pd
-
 import torch
 import torch.nn as nn
-
 
 def _split_n_in_m_parts(n, m):
     """ Split integer n in m integers which sum up to n again, even if m * (n//m) != n.
@@ -14,7 +15,6 @@ def _split_n_in_m_parts(n, m):
     a = [n // m] * m
     a[0] = n - (m - 1) * a[0]
     return a
-
 
 def sticky_sequence(a, threshold=0.25):
     """Transform a sequence into a "sticky sequence" where the value is falling back to the previous sequence element
@@ -133,6 +133,10 @@ def make_sequential(
 def make_bigram_toy_data(n_samples=10000, n_sequences=1000, n_features=3):
     """ Create sequential toy data with two classes and features representing
     the sign of the differences to the previous sequence elements.
+    Args:
+        n_samples (int): number of samples to be simulated
+        n_sequences (int): number of sequences to be simulated
+        n_features (int): number of sequences 
     """
 
     variables = ["v{0}".format(i) for i in range(n_features)]
